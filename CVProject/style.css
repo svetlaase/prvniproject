@@ -1,0 +1,542 @@
+:root {
+  --primary-color: #33292a;
+  --secondary-color: #fff;
+  --background-color: #333333;
+  --font-color: #644b4f;
+  --section-color: #f2f2f2;
+  --finis-color: #efa69d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Responzivní styl pro malé obrazovky */
+@media (max-width: 768px) {
+  .section,
+  .navigation-list,
+  .home-section,
+  .flexbox-container,
+  .gallery,
+  .contact-wrapper,
+  .reviews,
+  .recenze-1,
+  .icon-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .navigation-wrapper ul li a {
+    display: none;
+  }
+
+  .navigation-item {
+    display: block;
+  }
+
+  .menu-icon {
+    width: 35px;
+    margin-left: auto;
+  }
+
+  .text-section,
+  .article-img-wrapper {
+    width: 100%;
+  }
+
+  .icon-container {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrapper {
+    flex-direction: row;
+  }
+}
+
+/* Specifický styl pro navigaci */
+.navigation {
+  background-color: var(--primary-color);
+}
+
+.navigation-wrapper {
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.navigation-item a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  display: inline-block;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.navigation-item {
+  display: block;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navigation-item {
+    display: block;
+  }
+  .menu-icon {
+    display: block;
+    width: 35px;
+  }
+
+  .navigation-list {
+    display: none;
+  }
+}
+
+/* Specifický styl pro Hero Section */
+.hero-section {
+  background-image: url(image/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  height: calc(100vh - 27px);
+}
+
+.hero-wrapper {
+  max-width: 95%;
+  margin: 0 auto;
+  height: 100%;
+
+  position: relative;
+}
+
+.hero-text {
+  color: var(--secondary-color);
+  font-size: 80px;
+  text-align: left;
+  position: absolute;
+  padding-right: 15%;
+  right: 4%;
+  bottom: 6%;
+}
+
+@media (max-width: 768x) {
+  .hero-wrapper {
+    height: auto;
+    padding: 20px;
+  }
+  .hero-text {
+    font-size: 70px;
+
+    bottom: 10%;
+  }
+}
+
+/* Content-section Obrazek a text vedle sebe */
+
+.section-content-section {
+  padding: 50px 0;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  gap: 5px;
+}
+
+.text-section,
+.article-img-wrapper {
+  flex: 1;
+  margin: 10px;
+  min-width: 150px;
+}
+
+.text-section {
+  padding: 20px;
+  flex: 1;
+  margin: 10px;
+}
+
+.text-section h2 {
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  margin-top: 10px;
+}
+
+.article-img-wrapper img {
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .text-section {
+  }
+
+  .article-img-wrapper img {
+  }
+
+  .text-section h2 {
+  }
+
+  .text-section p {
+  }
+}
+
+/* Text a icon pod sebou */
+.section-flexbox-container {
+  background-color: var(--primary-color);
+  padding: 5px;
+}
+
+.content-wrapper {
+  text-align: center;
+  position: relative;
+  width: 53%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+h3 {
+  color: var(--secondary-color);
+  margin-top: 25px;
+  font-size: 40px;
+}
+
+.for-text {
+  margin: 0 auto;
+  margin-top: 35px;
+  color: var(--secondary-color);
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.icon-container {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-top: 25px;
+}
+.icon1 img {
+}
+
+.icon1 {
+  width: 100px;
+}
+
+.icon-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .icon-wrapper {
+    display: block;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  .icon-container {
+    font-size: 15px;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+/*Galleria */
+
+.section-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 53%;
+  margin: 0 auto;
+  gap: 35px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.photo-gallery,
+.gallery-text {
+  flex: 0 1 calc(99.9% / 3 - 70px / 3);
+  height: 200px;
+  display: flex;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 35px;
+}
+
+.photo-gallery {
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-gallery1 {
+  background-image: url(image/simon-english-48nerZQCHgo-unsplash.jpg);
+}
+.photo-gallery2 {
+  background-image: url(image/james-wheeler-ZOA-cqKuJAA-unsplash.jpg);
+}
+.photo-gallery3 {
+  background-image: url(image/daniel-tseng-73lmMKhi2U8-unsplash.jpg);
+}
+.photo-gallery4 {
+  background-image: url(image/holly-mandarich-UVyOfX3v0Ls-unsplash.jpg);
+}
+.photo-gallery5 {
+  background-image: url(image/patrick-szylar-45bM3XGqnDE-unsplash.jpg);
+}
+.photo-gallery6 {
+  background-image: url(image/chung-yee-tsang-wqxCKM0R6R8-unsplash.jpg);
+}
+.photo-gallery7 {
+  background-image: url(image/julian-bialowas-ilkTnuMunP8-unsplash.jpg);
+}
+.photo-gallery8 {
+  background-image: url(image/matej-drha-rbDzMcJsBkY-unsplash.jpg);
+}
+
+.gallery-text {
+  background: rgb(201, 201, 201);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section-gallery img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-gallery,
+  .gallery-text {
+    flex-basis: 100%;
+  }
+}
+
+/*Text i contact button*/
+
+.contact-section {
+  background-color: var(--font-color);
+  margin-top: 70px;
+}
+
+.contact-wrapper {
+  display: flex;
+  width: 53%;
+  margin: auto;
+  gap: 20px;
+  padding: 50px 0;
+  color: var(--secondary-color);
+}
+
+.contact-title,
+.contact-text {
+}
+
+.contact-title {
+  flex-basis: 25%;
+  font-size: 35px;
+  align-self: center;
+  font-weight: bold;
+}
+
+.contact-text {
+  flex: 1;
+
+  flex: 1;
+  font-size: 20px;
+}
+
+.top {
+  margin-top: 25px;
+}
+
+.contact-button {
+  height: 400px;
+  width: 100px;
+  padding: 10px;
+  margin-top: 25px;
+  border-radius: 8px;
+  height: fit-content;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .contact-title {
+    min-width: 250px;
+    margin: 0 auto;
+    font-size: 2, 5rem;
+    margin-left: 5px;
+    margin-top: 95px;
+    width: 90%;
+  }
+  .contact-text {
+    min-width: 350px;
+    margin: 0 auto;
+    font-size: 1rem;
+    margin-right: 35px;
+    margin-top: 35px;
+    width: 70%;
+  }
+
+  button {
+    text-align: center;
+    flex: 1;
+  }
+}
+
+/*Recenze rewievs card*/
+
+.reviews {
+  width: 53%;
+  margin: auto;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 105px;
+  font-size: 40px;
+}
+
+.description {
+  text-align: center;
+  width: 350px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.review-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .review-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.review-card {
+  text-align: center;
+  margin-top: 75px;
+  flex: 1;
+}
+
+.review-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 55px;
+}
+
+.text {
+  margin-top: 10px;
+}
+
+.name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+@media (min-width: 768px) {
+}
+
+/*Image section */
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.image-wrapper {
+  width: 50%;
+  height: 450px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    width: 100%;
+  }
+}
+
+h6 {
+  font-size: 25px;
+  text-decoration: underline;
+  text-align: center;
+  color: var(--finis-color);
+  background-color: #333333;
+  padding: 25px;
+}
+
+footer {
+  font-size: 20px;
+  color: var(--secondary-color);
+  background-color: #333333;
+  text-align: center;
+}
